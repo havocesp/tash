@@ -1,19 +1,21 @@
-# TAISH
-_Technical Analysis Indicators for SHell environments_
-## Description
-Get some altcoin's assets technical analysis indicators result value from command line.
+# TASH: Technical Analysis Indicators from SHell
 
-Now you can combine Technical Analysis Indicators with shell scripting or cron to execute actions based on indicators result.
-## Data source
- _TODO_
-## Requirements
-- Python3 interpreter
-- TA-Lib
+## Description
+Tash provide is a pure python 3 altcoin exchanges assistant project mostly who provides exchanges pairs assets calculation results based on Technical Analyslis Indicators.
+
+This project made possible get some altcoin's assets technical analysis indicators result value from command line. 
+
+It is shell scripting friendly it should be useful for Shell Scripting Algorithmic trading. Combine Technical Analysis Indicators with shell scripting (or with cron) to execute actions based on indicators result.
+
+## Python 3 requirements
+- TA-Lib (this require a C++ TA-Lib install also)
 - fire
 - krakenex
+
 ## Basic usage
  **tash** indicator asset_pair _[arguments ...]_
+ 
 ## Example
-Simple Moving Average for ETHEUR asset pair with 9 as period value:
+Last 3 Simple Moving Average, Relative Stregth Index and Money Flow Index candles for ETHEUR pair (using OHLC 15 min candles):
 
- **tash** sma ETHEUR --timeperiod 9
+ **tash** ti sma rsi mfi XETHZEUR --interval 15 --output-limit 3
